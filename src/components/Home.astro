@@ -1,11 +1,6 @@
----
-import background from "../../public/background.svg";
-import imageProfile from "../../public/jeje.jpeg";
----
-
 <main class="home">
   <section class="container">
-    <img id="profile" src={imageProfile.src} alt="" fetchpriority="high" />
+    <img id="profile" src="/jeje.jpeg" alt="" fetchpriority="high" />
     <article class="container">
       <h1 class="title">
         <span>Claris Yolanda</span>
@@ -14,10 +9,12 @@ import imageProfile from "../../public/jeje.jpeg";
 
       <p class="text">Sí, efectivamente, hice esto para ti.</p>
 
-      <a class="btn" href="/patu/gallery">Dale aqui puta 💜</a>
+      <a class="btn" href={`${import.meta.env.BASE_URL}patu/gallery`}>
+        Dale aqui puta 💜
+      </a>
     </article>
   </section>
-  <img id="background" src={background.src} alt="" fetchpriority="high" />
+  <img id="background" src="/background.svg" alt="" fetchpriority="high" />
 </main>
 
 <style is:global>
