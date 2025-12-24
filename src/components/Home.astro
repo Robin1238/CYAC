@@ -1,0 +1,120 @@
+---
+import background from "../assets/background.svg";
+import imageProfile from "../assets/jeje.jpeg";
+---
+
+<main class="home">
+  <section class="container">
+    <img id="profile" src={imageProfile.src} alt="" fetchpriority="high" />
+    <article class="container">
+      <h1 class="title">
+        <span>Claris Yolanda</span>
+        <span>Albitres</span>
+      </h1>
+
+      <p class="text">Sí, efectivamente, hice esto para ti.</p>
+
+      <a class="btn" href="/patu/gallery">Dale aqui puta 💜</a>
+    </article>
+  </section>
+  <img id="background" src={background.src} alt="" fetchpriority="high" />
+</main>
+
+<style is:global>
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(150px);
+  }
+
+  #profile {
+    width: 120px;
+    height: 120px;
+    padding: 2px;
+    border-radius: 100%;
+    margin: 50px 0px 30px 0px;
+    border: 5px solid #61385b;
+  }
+
+  .title {
+    font-family: "Satoshi", sans-serif;
+    font-weight: 900;
+    font-size: clamp(3.5rem, 5vw, 4rem);
+    line-height: 1.09;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    color: white;
+    letter-spacing: -2px;
+  }
+
+  .title span {
+    display: block;
+  }
+
+  .text {
+    font-family: "Satoshi", sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.2rem, 1vw, 2rem);
+    line-height: 1.09;
+    text-align: center;
+    margin: 50px 0 20px 0;
+    text-transform: uppercase;
+    color: rgb(176, 175, 175);
+    letter-spacing: -1px;
+  }
+
+  .home {
+    width: 100vw;
+    height: 100vh;
+    padding: 50px;
+    background-color: #101316;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    color: white;
+    cursor: crosshair;
+    font-family: "Satoshi", sans-serif;
+    font-weight: 700;
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
+    padding: 15px 30px;
+    border: none;
+    transition: all 0.3s ease;
+    background: linear-gradient(to right, rgb(49 46 129), rgb(88 28 135), rgb(88 28 135));
+    border-radius: 0.5rem;
+    box-shadow:
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.2),
+      0 2px 0 0 #312e81,
+      0 4px 0 0 #1e1b4b,
+      0 6px 0 0 #0f172a,
+      0 8px 0 0 #020617,
+      0 8px 16px 0 rgba(49, 46, 129, 0.5);
+    overflow: hidden;
+    text-decoration: none;
+  }
+
+  .btn:hover {
+    background: linear-gradient(135deg, #9b5de5, #ff63c3);
+    text-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
+    transform: translateY(4px);
+    box-shadow:
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.2),
+      0 1px 0 0 #312e81,
+      0 2px 0 0 #1e1b4b,
+      0 3px 0 0 #0f172a,
+      0 4px 0 0 #020617,
+      0 4px 8px 0 rgba(49, 46, 129, 0.5);
+  }
+</style>
