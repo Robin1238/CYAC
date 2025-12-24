@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: "https://robin1238.github.io",
+  site: "https://Robin1238.github.io",
   base: "/CYAC",
 });

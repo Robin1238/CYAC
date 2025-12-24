@@ -1,11 +1,12 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import { historias } from "../../assets/historias.astro";
+import Layout from "../layouts/Layout.astro";
+import { historias } from "../assets/historias.astro";
 ---
 
 <Layout>
   <div>
-    <a href="/" class="back-btn" aria-label="Volver"> Volver </a>
+    <a href={`${import.meta.env.BASE_URL}`} class="back-btn"> Volver </a>
+
     <header class="timeline-header">
       <h2 class="timeline-title">Mini galleria</h2>
       <p class="timeline-subtitle">Promesas y dibujos que se expandirán con el tiempo.</p>
@@ -32,7 +33,7 @@ import { historias } from "../../assets/historias.astro";
   </div>
 </Layout>
 
-<style>
+<style is:global>
   .timeline {
     font-family:
       "Satoshi",
